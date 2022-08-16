@@ -1,0 +1,100 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+    background-color: #ADD8E6;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px;
+}
+
+.red {
+    color: rgb(243, 34, 34);
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: rgb(6, 168, 6)
+}
+
+button {
+    margin-left: 10px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4bc0ee;
+    color: #fff;
+    padding: 5px 16px;
+    font-size: 25px;
+    transition: 250ms all ease-in-out;
+}
+
+button:active {
+    background-color: #08aef0;
+}
+
+.list-container {
+    padding: 20px 0 0 0;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background-color: #87CEEB;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 250ms all ease-in-out;
+    position: relative;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.list-item:hover {
+    background-color: #4bc0ee;
+}
+
+p {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.task-input {
+    border: none;
+    padding: 5px 10px;
+    font-size: 25px;
+}
+
+.checkbox {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+}

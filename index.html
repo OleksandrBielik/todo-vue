@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-bind:class="classObject">Task list</h1>
+        <form class="form" v-on:submit.prevent="addTask(task)">
+            <input class="task-input" type="text" v-model="task">
+            <button type="submit">ADD</button>
+        </form>
+        <ul class="list-container" v-bind:list = 'list' >
+            <li class="list-item " v-for="item in list" :key="item.id" v-bind:item='item' v-on:remove-task="removeTask">
+                <input class="checkbox" type="checkbox" v-on:change="item.done = !item.done">
+                <p v-bind:class="{completed:item.done}" v-on:click="removeTask(item.id)">{{item.title}}</p>
+            </li>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
